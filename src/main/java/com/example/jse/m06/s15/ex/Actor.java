@@ -11,20 +11,44 @@ package com.example.jse.m06.s15.ex;
  * Abstract base class
  */
 public abstract class Actor {
-    /**
-     * Canonical constructor
-     * 
-     * @param name the actor name
-     */
-    protected Actor(String name) {
-        // TODO
-    }
+	private String name;
+	private int experience;
+	private boolean alive;
 
-    /**
-     * Fight against an enemy
-     * 
-     * @param enemy another actor
-     * @return true if the current actor wins
-     */
-    public abstract boolean fight(Actor enemy);
+	/**
+	 * Canonical constructor
+	 * 
+	 * @param name the actor name
+	 */
+	protected Actor(String name, int experience) {
+		this.name = name;
+		this.experience = experience;
+		this.alive = true;
+	}
+
+	// questi sono i getter, impediscono di modificare il campo ma lo rendono visibile
+	public String getName() {
+		return name;
+	}
+
+	public int getExperience() {
+		return experience;
+	}
+	
+//getter; è diverso perchè è un booleano ma è un getter
+	public boolean isAlive() {
+		return alive;
+	}
+//setter, mi permette di vedere il campo ma anche di modificarlo
+	public void setAlive(boolean alive) {
+		this.alive = alive;
+	}
+
+	/**
+	 * Fight against an enemy
+	 * 
+	 * @param enemy another actor
+	 * @return true if the current actor wins
+	 */
+	public abstract boolean fight(Actor enemy);
 }
