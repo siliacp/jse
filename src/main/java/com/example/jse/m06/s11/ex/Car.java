@@ -7,10 +7,8 @@ package com.example.jse.m06.s11.ex;
 
 import java.util.logging.Logger;
 
-/**
- * TODO: is-a Vehicle and Conditioning
- */
-public class Car {
+public class Car extends Vehicle implements Conditioning {
+
     private static final Logger log = Logger.getGlobal();
 
     /**
@@ -18,5 +16,10 @@ public class Car {
      */
     public Car() {
         log.info("Car created");
+    }
+    
+    @Override 
+    public void  setTemperature(int t) {
+    	log.info("Temperature: " + t);
     }
 }

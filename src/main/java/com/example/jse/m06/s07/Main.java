@@ -25,6 +25,6 @@ public class Main {
 
         TabbyCat tim = new TabbyCat();
         TabbyCat timmy = tim.createSon();
-        System.out.println(timmy);
+        System.out.println(timmy); 
     }
 }

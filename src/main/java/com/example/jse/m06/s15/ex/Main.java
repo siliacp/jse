@@ -5,7 +5,9 @@
  */
 package com.example.jse.m06.s15.ex;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 /**
  * Exercise: create a hierarchy of classes based on Actor dentro le attrici devi
@@ -31,31 +33,37 @@ public class Main {
 	 */
 	public static void main(String[] args) {
 		// TODO: create actors, both warriors and wizards
-		Actor[] actors = { new Warrior("Fabrizia", 2), new Warrior("Silvia", 5), new Warrior("Chiara", 1001),
-				new Witch("Silia", 3), new Witch ("Emanuele", 1), new Witch("Tiziana", 8), new Witch("Elena", 5) };
+		List<Actor> actors = new ArrayList<>(List.of(new Warrior("Fabrizia", 2), new Warrior("Silvia", 5),
+				new Warrior("Chiara", 1001), new Witch("Silia", 3), new Witch("Emanuele", 1), new Witch("Tiziana", 8),
+				new Witch("Elena", 5)));
+
+//		Actor[] actors = { new Warrior("Fabrizia", 2), new Warrior("Silvia", 5), new Warrior("Chiara", 1001),
+//				new Witch("Silia", 3), new Witch("Emanuele", 1), new Witch("Tiziana", 8), new Witch("Elena", 5) };
 
 //		for (Actor actor : actors) {
 //			System.out.println(actor);
 //		}
 
 		System.out.println("Let's fight ...");
-		for (int i = 0; i < actors.length; i++) {
-			for (int j = 0; j < actors.length; j++) {
+		for (int i = 0; i < actors.size(); i++) {
+			for (int j = 0; j < actors.size(); j++) {
 				if (i != j) {
-					actors[i].fight(actors[j]);
+					if (actors.get(i).fight(actors.get(j))) { //actor i combatte contro actor j
+						actors.remove(j);
+					} else {
+						actors.remove(i);
+					}
 				}
 
 			}
-			System.out.println("Actor: " + Arrays.toString(actors));
+			System.out.println("Actor: " + actors);
 			// ...
 		}
-		for (int i = 0;  i < actors.length; i++) {
-			if (actors[i].isAlive()) {
-				System.out.println(actors[i].getName() + " is alive");
+		for (int i = 0; i < actors.size(); i++) {
+			if (actors.get(i).isAlive()) {
+				System.out.println(actors.get(i).getName() + " is alive");
 			}
 		}
-		
-		
-		
+
 	}
 }

@@ -9,14 +9,24 @@ package com.example.jse.m02.s11.ex;
  * Control flow - Loop: while / do-while
  */
 public class Exercise1 {
-    /**
-     * Print all values in [0 .. 9] two times:
-     * <li>By while loop
-     * <li>By do-while loop
-     * 
-     * @param args not used
-     */
-    public static void main(String[] args) {
-        // TODO
-    }
+	/**
+	 * Print all values in [0 .. 9] two times:
+	 * <li>By while loop
+	 * <li>By do-while loop
+	 * 
+	 * @param args not used
+	 */
+	public static void main(String[] args) {
+		int i = 0;
+		while (i < 10) {
+			System.out.println(i);
+			i++;
+		}
+		System.out.println("****");
+		int j =0;
+		do {
+			System.out.println(j);
+			j++;
+		}while (j < 10);
+	}
 }

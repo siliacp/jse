@@ -24,6 +24,7 @@ public class ArraysExamples {
     public static void main(String[] args) {
         int[] base = { 6, 2, 4, 5, 3 };
         System.out.print("The base array: ");
+        System.out.print(base + " ");
         System.out.println(Arrays.toString(base));
 
         // create a copy of one w/ length increased by 2

@@ -7,10 +7,11 @@ package com.example.jse.m06.s11.ex;
 
 import java.util.logging.Logger;
 
+public class MotorBike extends Vehicle {
 /**
  * TODO: MotorBike is-a Vehicle
  */
-public class MotorBike {
+
     private static final Logger log = Logger.getGlobal();
 
     /**

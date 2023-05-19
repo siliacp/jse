@@ -10,7 +10,7 @@ package com.example.jse.m06.s10;
  */
 public class Man {
     private static final String DEFAULT_NAME = "Unknown";
-    private String name;
+    protected String name;
 
     /**
      * No-arg constructor

@@ -15,6 +15,7 @@ public class While {
      * 
      * @param args each of its items are printed
      */
+
     public static void main(String[] args) {
         if (args.length == 0) {
             System.out.println("Please, pass me arguments!");

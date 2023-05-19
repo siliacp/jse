@@ -11,4 +11,6 @@ package com.example.jse.m06.s11.ex;
  * TODO: provide an abstract method to set the temperature to a given value
  */
 public interface Conditioning {
+
+	public void setTemperature(int t); // punto e virgola perché è un interfaccia e può avere metodi solo senza body
 }

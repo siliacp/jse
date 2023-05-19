@@ -11,7 +11,7 @@ package com.example.jse.m06.s10;
  */
 public class Werewolf extends Man implements Wolfable {
     // !!! BAD idea, see Man.name !!! TODO: fix the mistake
-    private String name;
+   // private String name;
 
     /**
      * Canonical constructor
@@ -20,8 +20,8 @@ public class Werewolf extends Man implements Wolfable {
      */
     public Werewolf(String name) {
         // more info on super soon
-        // super(name);
-        this.name = name;
+        super(name);
+       // this.name = name;
     }
 
     /**

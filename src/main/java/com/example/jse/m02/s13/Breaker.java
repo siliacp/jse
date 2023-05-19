@@ -17,9 +17,9 @@ public class Breaker {
      */
     public static void main(String[] args) {
         // target is Bob, or whatever the user passes in
-        String target = args.length == 0 ? "Bob" : args[0];
+        String target = args.length == 0 ? "Bea" : args[0];
 
-        String[] guests = { "Tom", "Bob", "Kim", "Zoe", "Al", "Pete" };
+        String[] guests = { "Ada", "Bea", "Kim", "Zoe", "Lea", "Lena" };
 
         for (String guest : guests) {
             if (guest.equals(target)) {

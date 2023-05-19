@@ -11,7 +11,9 @@ import java.util.logging.Logger;
  * A sample class - Encapsulation violation
  */
 public class Dog {
-    private static final Logger log = Logger.getGlobal();
+    
+
+	private static final Logger log = Logger.getGlobal();
     private static final String NO_NAME = "Unknown";
 
     /** !!! weak data hiding - don't do that, if you don't really have to */

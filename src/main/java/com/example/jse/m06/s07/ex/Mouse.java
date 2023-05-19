@@ -12,4 +12,16 @@ package com.example.jse.m06.s07.ex;
  */
 public class Mouse {
     // TODO: override toString()
+	private String name;
+	private int age;
+	
+	public Mouse (String name, int age) {
+		this.name = name;
+		this.age = age;
+	}
+	
+	@Override
+	public String toString() {
+		return "Sono " + age + "a " + name + ".";
+	}
 }

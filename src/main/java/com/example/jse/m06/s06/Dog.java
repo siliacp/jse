@@ -68,29 +68,29 @@ public class Dog extends Object {
      * <p>
      * Two dogs objects are considered equal if name and owner are equal
      */
-    @Override
-    public boolean equals(Object obj) {
-        if (obj == this) {
-            // reflexivity
-            return true;
-        }
-        if (!(obj instanceof Dog)) {
-            // a dog won't be equal to a non-dog
-            return false;
-        }
-
-        Dog that = (Dog) obj;
-        return Objects.equals(this.name, that.name) && Objects.equals(this.owner, that.owner);
-    }
-
-    /**
-     * Consider using an external library for better performance or use IDE
-     * auto-generation tool or extract code from Arrays.hashCode()
-     */
-    @Override
-    public int hashCode() {
-        return Objects.hash(name, owner);
-    }
+//    @Override
+//    public boolean equals(Object obj) {
+//        if (obj == this) {
+//            // reflexivity
+//            return true;
+//        }
+//        if (!(obj instanceof Dog)) {
+//            // a dog won't be equal to a non-dog
+//            return false;
+//        }
+//
+//        Dog that = (Dog) obj;
+//        return Objects.equals(this.name, that.name) && Objects.equals(this.owner, that.owner);
+//    }
+//
+//    /**
+//     * Consider using an external library for better performance or use IDE
+//     * auto-generation tool or extract code from Arrays.hashCode()
+//     */
+//    @Override
+//    public int hashCode() {
+//        return Objects.hash(name, owner);
+//    }
 
     /**
      * Consider using IDE auto-generation tool
@@ -99,4 +99,29 @@ public class Dog extends Object {
     public String toString() {
         return "Dog [" + name + ", " + owner + "]";
     }
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(name, owner);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())  //getClass ritorna la descrizione della classe. 
+			return false;
+		Dog other = (Dog) obj;	// stiamo facendo un cast, ossia 
+		return Objects.equals(name, other.name) && Objects.equals(owner, other.owner);
+	} //il metodo equals mi permette di cfr quello che voglio, in questo caso il this name con l'other name, ossia il nome del cane corrente con il nome dell'altro cane
+	
+	
+	
+	
+	
+	
+	
+	
 }

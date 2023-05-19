@@ -10,7 +10,7 @@ import java.util.Arrays;
 /**
  * Interface vs class example
  */
-public class Main {
+public class MainAnimali {
     /**
      * Using interfaces and classes
      * 
